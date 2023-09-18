@@ -1,6 +1,4 @@
-/* BookingRequests.css */
 
-/* Container styles */
 .booking-requests-container {
     padding: 20px;
     background-color: #f7f7f7;
@@ -8,13 +6,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Heading styles */
+  
   .booking-requests-heading {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  /* Table styles */
+ 
   .booking-requests-table {
     width: 100%;
     border-collapse: collapse;
@@ -32,7 +30,7 @@
     background-color: #f0f0f0;
   }
   
-  /* Button styles */
+ 
   .approve-button,
   .reject-button {
     padding: 8px 16px;

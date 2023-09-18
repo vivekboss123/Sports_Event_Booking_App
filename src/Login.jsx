@@ -1,10 +1,10 @@
-// Login.js
+
 import React, { useState } from 'react';
 import HRLogin from './HRLogin';
-import EmployeeLogin from './EmployeeLogin'; // Import the EmployeeLogin component
+import EmployeeLogin from './EmployeeLogin'; 
 
 function Login() {
-  const [selectedRole, setSelectedRole] = useState(null); // Change the initial value to null
+  const [selectedRole, setSelectedRole] = useState(null); 
 
   return (
     <div>
@@ -29,7 +29,7 @@ function Login() {
           Employee
         </label>
       </div>
-      {/* Conditional rendering based on selected role */}
+     
       {selectedRole === 'HR' ? <HRLogin /> : selectedRole === 'Employee' && <EmployeeLogin />}
     </div>
   );

@@ -1,11 +1,11 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Style the navigation bar */
+
 header {
     background-color: #333;
     color: white;
@@ -30,7 +30,7 @@ header {
     text-decoration: none;
 }
 
-/* Style the dropdown menu */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -48,19 +48,19 @@ header {
     text-align: left;
 }
 
-/* Change color on hover */
+
 .dropdown-content a:hover {
     background-color: #555;
 }
 
-/* Style the dropdown arrow */
+
 .dropdown::after {
-    content: '\25BC'; /* Down arrow */
+    content: '\25BC'; 
     display: inline-block;
     margin-left: 5px;
 }
 
-/* Remove list styling for dropdown */
+
 .dropdown-content ul {
     list-style-type: none;
     padding-left: 0;

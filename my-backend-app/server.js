@@ -82,7 +82,7 @@ app.get('/api/venues/:selectedSport', async (req, res) => {
     try {
       const selectedSport = req.params.selectedSport;
   
-      // Query the database to get equipment items based on the selected sport
+      
       const equipmentItems = await db.any(
         'SELECT inventory_item FROM "SportzEventSchema"."sportzeventInventory" WHERE sport_name = $1',
         [selectedSport]
@@ -99,12 +99,12 @@ app.get('/api/venues/:selectedSport', async (req, res) => {
       const username= req.body.userId;
       const password  = req.body.password;
         console.log(username)
-      // Validate the input (e.g., check if username and password are not empty)
+      
       if (!username || !password) {
         return res.status(400).json({ error: 'Username and password are required' });
       }
   
-      // Query the database to verify the credentials
+     
       const employee = await db.oneOrNone(
         'SELECT * FROM "SportzEventSchema"."employee_credentials" WHERE user_id = $1',
         [username]
@@ -116,7 +116,7 @@ app.get('/api/venues/:selectedSport', async (req, res) => {
         return res.status(401).json({ error: 'Invalid credentials' });
       }
   
-      // Verify the password (you should hash the stored password and compare hashes)
+      
        if (password !== employee.password) {
          res.send("failed");
        }
@@ -124,22 +124,21 @@ app.get('/api/venues/:selectedSport', async (req, res) => {
             res.send('success')
        }
        
-      // Successful login
-      //res.json({ message: 'Login successful' });
+     
     } catch (error) {
       console.error('Error:', error);
       res.status(500).json({ error: 'Internal server error' });
     }
   });
   
-// Server route to handle booking requests
+
 app.post('/api/booking-requests', async (req, res) => {
     try {
       const  sport  = req.body.sport;
       const venue  = req.body.venue;
       const equipment  = req.body.equipment;
   
-      // Insert a new row into the booking_requests table
+      
       await db.none(
         'INSERT INTO "SportzEventSchema".booking_requests (sport, venue, equipment, status) VALUES ($1, $2, $3, $4)',
         [sport, venue, equipment, 'Pending']
@@ -147,19 +146,19 @@ app.post('/api/booking-requests', async (req, res) => {
       console.log(req.body);
       console.log(equipment)
   
-      // Send a success response to the client
+      
       res.json({ success: true, message: 'Booking request submitted successfully' });
     } catch (error) {
       console.error('Error:', error);
   
-      // Send an error response to the client
+     
       res.status(500).json({ success: false, error: 'Booking request failed' });
     }
   });
     
   app.get('/api/pending-booking-requests', async (req, res) => {
     try {
-      // Query the database to fetch pending booking requests
+      
       const pendingRequests = await db.any(
         'SELECT * FROM "SportzEventSchema".booking_requests WHERE status = $1',
         ['Pending']
@@ -174,9 +173,9 @@ app.post('/api/booking-requests', async (req, res) => {
   app.post('/api/approve-booking-request/:bookingId', async (req, res) => {
     try {
       const bookingId = req.params.bookingId;
-      const action = req.body.action; // 'approve' or 'reject'
+      const action = req.body.action; 
   
-      // Update the status of the booking request based on the action
+      
       await db.none(
         'UPDATE "SportzEventSchema".booking_requests SET status = $1 WHERE booking_id = $2',
         [action === 'approve' ? 'Approved' : 'Rejected', bookingId]

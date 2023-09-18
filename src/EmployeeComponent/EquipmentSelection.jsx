@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './EquipmentSelection.css'; // Import the CSS file
+import './EquipmentSelection.css'; 
 
 function EquipmentSelection({ selectedSport,setUpdateEquipment }) {
   const [equipmentItems, setEquipmentItems] = useState([]);
   const [selectedEquipment, setSelectedEquipment] = useState([]);
 
   useEffect(() => {
-    // Fetch equipment items based on the selected sport
+    
     const fetchEquipment = async () => {
       try {
         if (selectedSport) {
           const response = await axios.get(`/api/equipment/${selectedSport}`);
           setEquipmentItems(response.data);
         } else {
-          // Clear equipment items if no sport is selected
+          
           setEquipmentItems([]);
         }
       } catch (error) {

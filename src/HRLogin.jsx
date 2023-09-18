@@ -8,17 +8,17 @@ function HRLogin() {
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate(); 
 
   const handleLogin = () => {
     if (userId === 'Admin' && password === 'sportz interactive') {
-      // Successful login logic here
+      
       setLoginError(false); 
       navigate('/dashboard');
       
-      // Reset the login error state
+      
     } else {
-      // Incorrect login logic here
+      
       setLoginError(true);
     }
   };
@@ -60,7 +60,7 @@ function HRLogin() {
   </form>
 
   
-      {/* Conditional rendering of the Link component */}
+      
       
     </div>
   );

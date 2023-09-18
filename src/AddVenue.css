@@ -1,4 +1,4 @@
-/* AddVenue.css */
+
 .add-venue-container {
   max-width: 500px;
   margin: 0 auto;
@@ -59,15 +59,15 @@
   margin-bottom: 20px;
 }
 
-/* Additional styling for specific elements */
+
 
 .form-input[type="date"],
 .form-input[type="time"] {
-  /* Adjust styles for date and time inputs */
+  
   padding: 8px;
 }
 
 .form-input[type="number"] {
-  /* Adjust styles for number inputs */
+  
   width: 70px;
 }

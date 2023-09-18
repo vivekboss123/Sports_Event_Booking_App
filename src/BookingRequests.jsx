@@ -5,7 +5,7 @@ function BookingRequests() {
   const [pendingRequests, setPendingRequests] = useState([]);
 
   useEffect(() => {
-    // Fetch pending booking requests when the component mounts
+    
     fetchPendingRequests();
   }, []);
 
@@ -20,10 +20,10 @@ function BookingRequests() {
 
   const handleAction = async (bookingId, action) => {
     try {
-      // Send a request to approve or reject a booking request
+      
       await axios.post(`/api/approve-booking-request/${bookingId}`, { action });
       
-      // Update the UI to reflect the change in status
+      
       fetchPendingRequests();
     } catch (error) {
       console.error('Error:', error);

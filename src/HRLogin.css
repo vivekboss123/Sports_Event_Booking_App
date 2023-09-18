@@ -1,4 +1,4 @@
-/* HRLogin.css */
+
 .hr-login-container {
     width: 400px;
     margin: 0 auto;
@@ -33,7 +33,7 @@
     background-color: #0056b3;
   }
   .hr-login-container {
-    /* Existing styles... */
-    margin-top: 20px; /* Add margin to create space */
+    
+    margin-top: 20px; 
   }
   

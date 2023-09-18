@@ -7,21 +7,21 @@ function BookingComponent({ selectedSport, selectedVenue, selectedEquipment }) {
 
     try {
       const response = await axios.post('/api/booking-requests', {
-        sport: selectedSport, // Use selectedSport from SportsSelection
-        venue: selectedVenue, // Use selectedVenue from VenueSelection
-        equipment: selectedEquipment, // Use selectedEquipment from EquipmentSelection
+        sport: selectedSport, 
+        venue: selectedVenue, 
+        equipment: selectedEquipment, 
       });
 
       if (response.data.success) {
-        // Booking request was successful, update UI or show a success message
+        
         alert('Booking request submitted successfully');
       } else {
-        // Handle errors, e.g., display an error message
+        
         alert('Booking request failed');
       }
     } catch (error) {
       console.error('Error:', error);
-      // Handle network or server errors
+      
       alert('An error occurred while submitting the booking request');
     }
   };

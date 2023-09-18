@@ -15,7 +15,7 @@ function AddVenue() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Create a new venue object
+    
     const newVenue = {
       venueName,
       sportsName,
@@ -30,10 +30,10 @@ function AddVenue() {
     
       const response = axios.post('api/add-venue', newVenue);
       console.log('Venue added successfully:', response.data);
-    // Add the new venue to the list of venues
+    
     setVenuesList([...venuesList, newVenue]);
 
-    // Clear the form fields
+    
     setVenueName('');
     setSportsName('');
     setEventDate('');
@@ -78,7 +78,7 @@ function AddVenue() {
         <button className="form-button" type="submit">Add</button>
       </form>
 
-      {/* Display the list of added venues */}
+      
       <div className="added-venues">
         <h4>List of Added Venues:</h4>
         <ul>

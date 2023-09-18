@@ -1,10 +1,10 @@
-/* EquipmentSelection.css */
 
-/* Add custom styles for checkboxes */
+
+
 .equipment-selection-checkbox-label {
     display: block;
     position: relative;
-    padding-left: 30px; /* Adjust as needed for spacing */
+    padding-left: 30px; 
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 10px;
@@ -16,32 +16,31 @@
     cursor: pointer;
   }
   
-  /* Custom checkbox design */
+
   .equipment-selection-checkbox-label .checkmark {
     position: absolute;
     top: 0;
     left: 0;
-    height: 20px; /* Adjust the size as needed */
-    width: 20px; /* Adjust the size as needed */
-    background-color: #eee; /* Background color of the checkbox */
-    border: 1px solid #ccc; /* Border of the checkbox */
-    border-radius: 3px; /* Rounded corners */
+    height: 20px; 
+    width: 20px; 
+    background-color: #eee; 
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
   }
   
-  /* When the checkbox is checked, style the checkmark */
+  
   .equipment-selection-checkbox-label input[type="checkbox"]:checked + .checkmark {
-    background-color: #007bff; /* Custom color when checked */
-    border: 1px solid #007bff; /* Custom border color when checked */
+    background-color: #007bff; 
+    border: 1px solid #007bff; 
   }
   
-  /* Style the checkmark inside the checkbox */
+ 
   .equipment-selection-checkbox-label .checkmark::before {
     content: "";
     position: absolute;
     display: none;
   }
   
-  /* Show the checkmark when the checkbox is checked */
   .equipment-selection-checkbox-label input[type="checkbox"]:checked + .checkmark::before {
     display: block;
     width: 50%;

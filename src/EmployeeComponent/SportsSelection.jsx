@@ -7,8 +7,8 @@ import axios from 'axios';
 function SportsSelection() {
   const [selectedSport, setSelectedSport] = useState('');
   const [sportsNamesList, setSportsNamesList] = useState([]);
-  const [selectedVenue, setSelectedVenue] = useState(''); // Define selectedVenue state
-  const [selectedEquipment, setSelectedEquipment] = useState(''); // Define selectedEquipment state
+  const [selectedVenue, setSelectedVenue] = useState(''); 
+  const [selectedEquipment, setSelectedEquipment] = useState(''); 
 
   useEffect(() => {
     axios
@@ -42,16 +42,16 @@ function SportsSelection() {
       <div>
         <VenueSelection
           selectedSport={selectedSport}
-          setSelectedVenue={setSelectedVenue} // Pass the setter function
+          setSelectedVenue={setSelectedVenue} 
         />
         <EquipmentSelection
           selectedSport={selectedSport}
-          setUpdateEquipment={setSelectedEquipment} // Pass the setter function
+          setUpdateEquipment={setSelectedEquipment} 
         />
         <BookingComponent
           selectedSport={selectedSport}
-          selectedVenue={selectedVenue} // Pass selectedVenue
-          selectedEquipment={selectedEquipment} // Pass selectedEquipment
+          selectedVenue={selectedVenue} 
+          selectedEquipment={selectedEquipment}
         />
       </div>
     </div>

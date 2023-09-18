@@ -1,6 +1,6 @@
-// Navbar.js
+
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom'; 
 import './Navbar.css';
 
 function Navbar() {
@@ -11,7 +11,7 @@ function Navbar() {
           <li><Link to="/">Home</Link></li>
           
           <li className="dropdown">
-            <span>Login as</span> {/* Remove the anchor tag */}
+            <span>Login as</span> 
             <ul className="dropdown-content">
               <li><Link to="/employee-login">Employee Login</Link></li>
               <li><Link to="/hr-login">HR Login</Link></li>

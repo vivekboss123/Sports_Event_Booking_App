@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; // Import Axios
+import axios from 'axios'; 
 
 function VenueSelection(props) {
   const [venues, setVenues] = useState([]);
   const [selectedVenue, setSelectedVenue] = useState('');
 
   useEffect(() => {
-    // Fetch venue names based on the selected sport
+    
     const fetchVenues = async () => {
       try {
         console.log('Selected sport:', props.selectedSport);
@@ -20,7 +20,7 @@ function VenueSelection(props) {
     if (props.selectedSport) {
       fetchVenues();
     } else {
-      setVenues([]); // Clear venues if no sport is selected
+      setVenues([]); 
     }
   }, [props.selectedSport]);
 

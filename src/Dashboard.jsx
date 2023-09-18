@@ -1,10 +1,10 @@
 import React from 'react';
-import './Dashboard.css'; // Import your CSS file for dashboard styling
+import './Dashboard.css'; 
 import { useNavigate } from 'react-router-dom';
 function Dashboard() {
     const navigate = useNavigate();
     const handleAddEventClick = () => {
-        // Navigate to the AddVenue component
+        
         navigate('/add-venue');
 };
     const handleAddSportsInventoryClick = ()=>{
